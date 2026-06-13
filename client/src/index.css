@@ -119,6 +119,7 @@ nav ul li a:hover { color: var(--brown); }
   font-weight: 300;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .hero p {
