@@ -85,15 +85,15 @@ function Admin() {
   }
 
   const markAsRead = async (id) => {
-    await fetch(`http://localhost:3000/api/contact/${id}/read`, {
-      method: 'PUT',
-      headers: authHeaders
+    await fetch(`http://localhost:3000/api/admin/messages/${id}/read`, {
+        method: 'PATCH',
+        headers: authHeaders
     })
     setMessages(prev =>
-      prev.map(m => m._id === id ? { ...m, read: true } : m)
+        prev.map(m => m._id === id ? { ...m, read: true } : m)
     )
     setUnreadCount(prev => Math.max(0, prev - 1))
-  }
+}
 
   const deleteMessage = async (id) => {
     const msg = messages.find(m => m._id === id)
