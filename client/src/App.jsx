@@ -10,12 +10,11 @@ import Documents from './components/Documents'
 import { useLocation } from 'react-router-dom'
 
 function App() {
-  const [projects, setProjects] = useState([])
   const location = useLocation()
   const isHome = location.pathname === '/'
 
-
-const [loading, setLoading] = useState(true)
+  const [projects, setProjects] = useState([])
+  const [loading, setLoading] = useState(true)
 
 useEffect(() => {
   fetch('https://portfolio-website-dngm.onrender.com/api/projects')
