@@ -27,7 +27,9 @@ function Admin() {
   }, [])
 
   useEffect(() => {
-    const socket = io('https://portfolio-website-dngm.onrender.com')
+    const socket = io('https://portfolio-website-dngm.onrender.com', {
+    transports: ['polling', 'websocket']
+    })
 
     socket.on('newMessage', (data) => {
         setUnreadCount(prev => prev + 1)

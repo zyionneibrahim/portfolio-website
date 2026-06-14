@@ -22,8 +22,9 @@ const io = new Server(server, {
     cors: {
         origin: '*',
         methods: ['GET', 'POST']
-    }
-}); 
+    },
+    transports: ['polling', 'websocket']
+});
 io.on('connection', (socket) => {
     console.log('Admin connected:', socket.id);
     socket.on('disconnect', () => {
