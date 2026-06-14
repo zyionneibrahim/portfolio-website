@@ -14,7 +14,7 @@ function App() {
   const location = useLocation()
   const isHome = location.pathname === '/'
 
- const [projects, setProjects] = useState([])
+
 const [loading, setLoading] = useState(true)
 
 useEffect(() => {
