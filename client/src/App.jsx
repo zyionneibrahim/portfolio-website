@@ -14,13 +14,18 @@ function App() {
   const location = useLocation()
   const isHome = location.pathname === '/'
 
-  useEffect(() => {
-   fetch('https://portfolio-website-dngm.onrender.com/api/projects')
+ const [projects, setProjects] = useState([])
+const [loading, setLoading] = useState(true)
+
+useEffect(() => {
+  fetch('https://portfolio-website-dngm.onrender.com/api/projects')
     .then(res => res.json())
     .then(data => {
-        if (Array.isArray(data)) setProjects(data)
+      if (Array.isArray(data)) setProjects(data)
+      setLoading(false)
     })
-  }, [])
+    .catch(() => setLoading(false))
+}, [])
 
   return (
     <div style={{ position: 'relative' }}>
@@ -50,13 +55,19 @@ function App() {
         <Documents />
         <div className="divider"></div>
         <section className="section" id="projects">
-          <p className="section-label">Work</p>
-          <h2>My Projects</h2>
-          <div className="projects-grid">
-            {projects.map(project => (
-              <ProjectCard key={project._id} project={project} />
-            ))}
-          </div>
+            <p className="section-label">Work</p>
+            <h2>My Projects</h2>
+            <div className="projects-grid">
+              {loading ? (
+                <p style={{ color: 'var(--text-muted)', fontFamily: 'Space Mono, monospace' }}>Loading...</p>
+              ) : projects.length === 0 ? (
+                <p style={{ color: 'var(--text-muted)', fontFamily: 'Space Mono, monospace' }}>No projects yet.</p>
+              ) : (
+              projects.map(project => (
+                <ProjectCard key={project._id} project={project} />
+              ))
+          )}
+        </div>
         </section>
         <div className="divider"></div>
         <Contact />
