@@ -6,7 +6,9 @@ function Documents() {
   useEffect(() => {
     fetch('https://portfolio-website-dngm.onrender.com/api/documents')
       .then(res => res.json())
-      .then(data => setDocuments(data))
+      .then(data => {
+        if (Array.isArray(data)) setDocuments(data)
+    })
   }, [])
 
   return (

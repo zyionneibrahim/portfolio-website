@@ -15,11 +15,21 @@ function App() {
   const isHome = location.pathname === '/'
 
   useEffect(() => {
-    fetch('https://portfolio-website-dngm.onrender.com/api/projects')
-      .then(res => res.json())
-      .then(data => setProjects(data))
+   fetch('https://portfolio-website-dngm.onrender.com/api/projects')
+    .then(res => res.json())
+    .then(data => {
+        if (Array.isArray(data)) setProjects(data)
+    })
   }, [])
 
+  return (
+    <div>
+        <p style={{color: 'white', padding: '2rem'}}>App is rendering</p>
+        {/* rest of your content */}
+  
+  </div>  
+  )
+  
   return (
     <div style={{ position: 'relative' }}>
 

@@ -5,8 +5,10 @@ function Skills() {
 
   useEffect(() => {
     fetch('https://portfolio-website-dngm.onrender.com/api/skills')
-      .then(res => res.json())
-      .then(data => setSkills(data))
+    .then(res => res.json())
+    .then(data => {
+        if (Array.isArray(data)) setSkills(data)
+    })
   }, [])
 
   return (
