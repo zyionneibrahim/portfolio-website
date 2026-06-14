@@ -23,14 +23,6 @@ function App() {
   }, [])
 
   return (
-    <div>
-        <p style={{color: 'white', padding: '2rem'}}>App is rendering</p>
-        {/* rest of your content */}
-  
-  </div>  
-  )
-  
-  return (
     <div style={{ position: 'relative' }}>
 
       {/* Particles ONLY on home page */}
