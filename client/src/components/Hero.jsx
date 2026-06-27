@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section className="hero" id="about">
       <p className="hero-eyebrow">Full-Stack Developer</p>
-      <h1>Zyionne <span>Aderinola</span></h1>
+      <h1>Zyionne Odafe<span>Hasani Ibrahim</span></h1>
       <h2>Building my tech career from the ground up.</h2>
       <p>
         I am a dedicated technologist who crafts dynamic, cloud-connected applications and websites primarily using the MERN stack. 
