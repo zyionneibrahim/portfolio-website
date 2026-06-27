@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <nav>
-      <h1>Zyionne Aderinola</h1>
+      <h1>Zyionne Odafe Hasani Ibrahim</h1>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
