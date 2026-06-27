@@ -5,8 +5,7 @@ function Hero() {
       <h1>Zyionne Odafe <span>Hasani Ibrahim</span></h1>
       <h2>Building my tech career from the ground up.</h2>
       <p>
-        I am a technologist on a deliberate journey to have a dynamic, accomplished, and multidisciplinary career in Software Engineering, 
-        Cloud Computing, Machine Learning & Artificial Intelligence, and Cybersecurity. I build with intention, 
+        I am a technologist on a deliberate journey to have a dynamic, accomplished, and multidisciplinary career in Cloud Computing, Machine Learning & Artificial Intelligence, and Cybersecurity. I build with intention, 
         learn with curiosity, design with purpose, and approach every technical challenge as an 
         opportunity to grow and innovate. 
       </p>
