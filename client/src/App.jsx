@@ -71,7 +71,7 @@ useEffect(() => {
         <div className="divider"></div>
         <Contact />
         <footer>
-          <p>© 2026 Zyionne Odafe Hasani Ibrahim</p>
+          <p>© 2026 Zyionne Eniola Sultan Abbas</p>
           <p>Built with MERN Stack</p>
         </footer>
       </div>

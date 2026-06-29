@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section className="hero" id="about">
       <p className="hero-eyebrow">Multi-faceted Technologist</p>
-      <h1>Zyionne Odafe <span>Hasani Ibrahim</span></h1>
+      <h1>Zyionne Eniola <span>Sultan Abbas</span></h1>
       <h2>Building my tech career from the ground up.</h2>
       <p>
         I am a technologist on a deliberate journey to have a dynamic, accomplished, and multidisciplinary career in Cloud Computing, Machine Learning & Artificial Intelligence, and Cybersecurity. I build with intention, 
